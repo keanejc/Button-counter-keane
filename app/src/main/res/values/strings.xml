@@ -3,6 +3,5 @@
     <string name="string1">-</string>
     <string name="string2">+</string>
     <string name="string3">Reset</string>
-    <string name="string4">TextView</string>
-
+    <string name="string4">0</string>
 </resources>

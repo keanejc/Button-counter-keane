@@ -1,13 +1,11 @@
 package com.introtoandriod.button_counter_keane;
 
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
@@ -33,7 +33,12 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                // Long mess that converts char sequence to string to int
+                int count = Integer.parseInt(String.valueOf(view.getText()));
+                int newCount = count--;
+
+                view.setText(String.valueOf(newCount));
+
                 clicks++;
                 if(clicks == maxClicks){
                     surprise();
@@ -45,7 +50,12 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
+                // Long mess that converts char sequence to string to int
+                int count = Integer.parseInt(String.valueOf(view.getText()));
+                int newCount = count++;
+
+                view.setText(newCount);
+
                 clicks++;
                 if(clicks == maxClicks){
                     surprise();
