@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 int count = Integer.parseInt(String.valueOf(view.getText()));
                 int newCount = count--;
 
-                view.setText(String.valueOf(newCount));
+                view.setText(Integer.toString(newCount));
 
                 clicks++;
                 if(clicks == maxClicks){
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 int count = Integer.parseInt(String.valueOf(view.getText()));
                 int newCount = count++;
 
-                view.setText(newCount);
+                view.setText(Integer.toString(newCount));
 
                 clicks++;
                 if(clicks == maxClicks){
@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
+
+        @Override
     public void onSaveInstanceState( Bundle savedInstanceState){
         super.onSaveInstanceState(savedInstanceState);
         savedInstanceState.putCharSequence("count",view.getText());
