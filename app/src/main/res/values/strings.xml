@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Button-counter-keane</string>
+    <string name="string1">-</string>
+    <string name="string2">+</string>
+    <string name="string3">Reset</string>
+    <string name="string4">TextView</string>
+
 </resources>
